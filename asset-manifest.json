@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ikoma-tw/static/css/main.f286cb00.css",
-    "main.js": "/ikoma-tw/static/js/main.33cbbfd1.js",
-    "static/js/453.ef84d9ce.chunk.js": "/ikoma-tw/static/js/453.ef84d9ce.chunk.js",
-    "index.html": "/ikoma-tw/index.html",
-    "main.f286cb00.css.map": "/ikoma-tw/static/css/main.f286cb00.css.map",
-    "main.33cbbfd1.js.map": "/ikoma-tw/static/js/main.33cbbfd1.js.map",
-    "453.ef84d9ce.chunk.js.map": "/ikoma-tw/static/js/453.ef84d9ce.chunk.js.map"
+    "main.css": "/static/css/main.4ee5d578.css",
+    "main.js": "/static/js/main.a2d6903e.js",
+    "static/js/453.ef84d9ce.chunk.js": "/static/js/453.ef84d9ce.chunk.js",
+    "index.html": "/index.html",
+    "main.4ee5d578.css.map": "/static/css/main.4ee5d578.css.map",
+    "main.a2d6903e.js.map": "/static/js/main.a2d6903e.js.map",
+    "453.ef84d9ce.chunk.js.map": "/static/js/453.ef84d9ce.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f286cb00.css",
-    "static/js/main.33cbbfd1.js"
+    "static/css/main.4ee5d578.css",
+    "static/js/main.a2d6903e.js"
   ]
 }
