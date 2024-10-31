@@ -35,7 +35,7 @@ function App() {
         <Route path="/list" element={<Loading Component={SupportList} onLoadingFinish={handleLoadingFinish} />} />
         <Route path="/News" element={<Loading Component={News} onLoadingFinish={handleLoadingFinish} />} />
         <Route path="/news/:id" element={<NewsDetail />} />
-        <Route path="*" element={<Page404 />} />
+        <Route path="*" element={<Page404 />} Component={Page404} onLoadingFinish={handleLoadingFinish} />
       </Routes>
       <TopButton />
       {!isLoading && <Footer />}
