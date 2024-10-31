@@ -24,7 +24,7 @@ const Toyota = [
         {
           "brand": "TOYOTA",
           "model": "4-RUNNER/HI LUX SURF",
-          "series": "GRN210/215",
+          "series": "GRN210 / 215",
           "dateRange": "02~11",
           "ikoma": "FR",
           "": "PCI-179",
@@ -35,7 +35,7 @@ const Toyota = [
         {
           "brand": "TOYOTA",
           "model": "4-RUNNER/HI LUX SURF",
-          "series": "GRN210/215",
+          "series": "GRN210 / 215",
           "dateRange": "02~11",
           "ikoma": "RR",
           "": "PCI-220",
@@ -90,7 +90,7 @@ const Toyota = [
         {
           "brand": "TOYOTA",
           "model": "ALTEZZA",
-          "series": "GXE10/SXE10",
+          "series": "GXE10 / SXE10",
           "dateRange": "99/01~",
           "ikoma": "FR",
           "": "",
@@ -101,7 +101,7 @@ const Toyota = [
         {
           "brand": "TOYOTA",
           "model": "ALTEZZA",
-          "series": "GXE10/SXE10",
+          "series": "GXE10 / SXE10",
           "dateRange": "99/01~",
           "ikoma": "RR",
           "": "",
@@ -749,7 +749,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "CORONA/CALDINA",
+          "model": "CORONA / CALDINA",
           "series": "AT/ST190 (333197/333198)",
           "dateRange": "92/03~98/05",
           "ikoma": "FR",
@@ -760,7 +760,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "CORONA/CALDINA",
+          "model": "CORONA / CALDINA",
           "series": "AT/ST190 (333107/333108)",
           "dateRange": "92/03~98/05",
           "ikoma": "RR",
@@ -771,7 +771,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "CORONA/CALDINA",
+          "model": "CORONA / CALDINA",
           "series": "ST195 (4WD)",
           "dateRange": "93/05~96/01",
           "ikoma": "RR",
@@ -837,7 +837,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "CRESSIDA/MARK2/CHASER",
+          "model": "CRESSIDA / MARK2 / CHASER",
           "series": "LX70/SX70",
           "dateRange": "84/08~88/08",
           "ikoma": "RR",
@@ -848,7 +848,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "CRESSIDA/MARK2/CHASER",
+          "model": "CRESSIDA / MARK2 / CHASER",
           "series": "RX80/GX80",
           "dateRange": "88/08~92/10",
           "ikoma": "RR",
@@ -870,7 +870,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "CRESSIDA/MARK2/CHASER",
+          "model": "CRESSIDA / MARK2 / CHASER",
           "series": "GX90/100 (341292)",
           "dateRange": "92~00",
           "ikoma": "RR",
@@ -881,8 +881,8 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "CRESSIDA/MARK2/CHASER",
-          "series": "GX93/105;JZX93/105(4WD)",
+          "model": "CRESSIDA / MARK2 / CHASER",
+          "series": "GX93 / 105;JZX93 / 105(4WD)",
           "dateRange": "93/10~00/09",
           "ikoma": "FR",
           "": "",
@@ -892,7 +892,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "CRESSIDA/MARK2/CHASER",
+          "model": "CRESSIDA / MARK2 / CHASER",
           "series": "GX110;JZX110",
           "dateRange": "00/10~04/10",
           "ikoma": "RR",
@@ -903,7 +903,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "CRESSIDA/MARK2/CHASER",
+          "model": "CRESSIDA / MARK2 / CHASER",
           "series": "GX110;JZX110",
           "dateRange": "00/10~04/10",
           "ikoma": "RR",
@@ -1068,7 +1068,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "HIGHLANDER/KLUGER",
+          "model": "HIGHLANDER / KLUGER",
           "series": "ACU30/35 (FWD/AWD)",
           "dateRange": "01~07",
           "ikoma": "FR",
@@ -1079,7 +1079,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "HIGHLANDER/KLUGER",
+          "model": "HIGHLANDER / KLUGER",
           "series": "(48510-48090)",
           "dateRange": "01~07",
           "ikoma": "FR",
@@ -1090,7 +1090,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "HIGHLANDER/KLUGER",
+          "model": "HIGHLANDER / KLUGER",
           "series": "ACU30 (FWD)",
           "dateRange": "01~03",
           "ikoma": "RR",
@@ -1101,7 +1101,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "HIGHLANDER/KLUGER",
+          "model": "HIGHLANDER / KLUGER",
           "series": "ACU30 (FWD)",
           "dateRange": "03~07",
           "ikoma": "RR",
@@ -1112,7 +1112,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "HIGHLANDER/KLUGER",
+          "model": "HIGHLANDER / KLUGER",
           "series": "ACU35 (AWD)",
           "dateRange": "01~07",
           "ikoma": "RR",
@@ -1123,7 +1123,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "HIGHLANDER/KLUGER",
+          "model": "HIGHLANDER / KLUGER",
           "series": "GSU40/45 (FWD/AWD)",
           "dateRange": "08~10",
           "ikoma": "FR",
@@ -1134,7 +1134,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "HIGHLANDER/KLUGER",
+          "model": "HIGHLANDER / KLUGER",
           "series": "GSU40/45 (FWD/AWD)",
           "dateRange": "10~13",
           "ikoma": "FR",
@@ -1145,7 +1145,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "HIGHLANDER/KLUGER",
+          "model": "HIGHLANDER / KLUGER",
           "series": "GSU40 (FWD)",
           "dateRange": "08~",
           "ikoma": "RR",
@@ -1156,7 +1156,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "HIGHLANDER/KLUGER",
+          "model": "HIGHLANDER / KLUGER",
           "series": "GSU45 (AWD)",
           "dateRange": "08~",
           "ikoma": "RR",
@@ -1167,7 +1167,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "HIGHLANDER/KLUGER",
+          "model": "HIGHLANDER / KLUGER",
           "series": "GSU50/55 (FWD/AWD)",
           "dateRange": "14~",
           "ikoma": "FR",
@@ -1178,7 +1178,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "HIGHLANDER/KLUGER",
+          "model": "HIGHLANDER / KLUGER",
           "series": "GSU50 (FWD)",
           "dateRange": "14~",
           "ikoma": "RR",
@@ -1189,7 +1189,7 @@ const Toyota = [
         },
         {
           "brand": "TOYOTA",
-          "model": "HIGHLANDER/KLUGER",
+          "model": "HIGHLANDER / KLUGER",
           "series": "GSU55 (AWD)",
           "dateRange": "14~",
           "ikoma": "RR",

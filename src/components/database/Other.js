@@ -353,7 +353,7 @@ const Other = [
         },
         {
           "brand": "MITSUBISHI",
-          "model": "L200/FORTE/STRADA/TRITON",
+          "model": "L200 / FORTE / STRADA / TRITON",
           "series": "KA5T 4WD (MR992320)",
           "dateRange": "05~",
           "ikoma": "FR",
@@ -364,7 +364,7 @@ const Other = [
         },
         {
           "brand": "MITSUBISHI",
-          "model": "L200/FORTE/STRADA/TRITON",
+          "model": "L200 / FORTE / STRADA / TRITON",
           "series": "KA5T 4WD",
           "dateRange": "05~",
           "ikoma": "RR",
