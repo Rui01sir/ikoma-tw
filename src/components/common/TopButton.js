@@ -31,8 +31,8 @@ function TopButton() {
                     <img src={`${process.env.PUBLIC_URL}/img/topbutton-icon.svg`} alt="Top-button" />
                 </button>
                 <button className="scroll-to-message">
-                    <Link to="https://www.whatsapp.com/?lang=zh_tw">
-                        <img src={`${process.env.PUBLIC_URL}/img/message-icon.svg`} alt="message-button" />
+                    <Link to="https://lin.ee/LM298cs">
+                        <img src={`${process.env.PUBLIC_URL}/img/messenger_icon.svg`} alt="messenger_icon-button" />
                     </Link>
                 </button>
             </div>

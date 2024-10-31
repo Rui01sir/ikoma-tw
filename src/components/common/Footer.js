@@ -23,10 +23,10 @@ const Footer = ({ hide }) => {
             <p>Absolutely supply good quality and comfort shock absorber</p>
             <div className="footer-icon">
                 <ul>
-                    <li><Link to="https://www.instagram.com/"><img src={`${process.env.PUBLIC_URL}/img/instagram.webp`} alt="instagram-icon"></img></Link></li>
-                    <li><a href="mailto:ikoma@ikoma-tw.com"><img src={`${process.env.PUBLIC_URL}/img/email.webp`} alt="email-icon"></img></a></li>
-                    <li><Link to="https://www.facebook.com/"><img src={`${process.env.PUBLIC_URL}/img/facebook.webp`} alt="facebook-icon"></img></Link></li>
-                    <li><Link to="https://www.whatsapp.com/"><img src={`${process.env.PUBLIC_URL}/img/whatapp.webp`} alt="whatapp-icons"></img></Link></li>
+                    <li><Link to="https://www.instagram.com/"><img src={`${process.env.PUBLIC_URL}/img/instagram_icon.svg`} alt="instagram-icon"></img></Link></li>
+                    <li><a href="mailto:ikoma@ikoma-tw.com"><img src={`${process.env.PUBLIC_URL}/img/email_icon.svg`} alt="email-icon"></img></a></li>
+                    <li><Link to="https://lin.ee/LM298cs"><img src={`${process.env.PUBLIC_URL}/img/line_icon.svg`} alt="facebook-icon"></img></Link></li>
+                    <li><Link to="https://www.whatsapp.com/"><img src={`${process.env.PUBLIC_URL}/img/whatapp_icon.svg`} alt="whatapp-icons"></img></Link></li>
                 </ul>
             </div>
                 </div>
