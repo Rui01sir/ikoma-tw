@@ -9,7 +9,7 @@ import Other from '../database/Other.js';
 const SupportList = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
@@ -26,7 +26,6 @@ const SupportList = () => {
     const data = allData[brand] || [];
 
     const itemsPerPage = 10;
-    const totalPages = Math.ceil(data.length / itemsPerPage);
     const [currentPage, setCurrentPage] = useState(1);
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -36,12 +35,13 @@ const SupportList = () => {
     };
 
     const filteredData = data.filter(item => 
-        item.model.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.brand.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.series.toLowerCase().includes(searchTerm.toLowerCase())
+        Object.values(item).some(value =>
+            value && value.toString().toLowerCase().includes(searchTerm.toLowerCase())
+        )
     );
 
     const getPageNumbers = () => {
+        const totalPages = Math.ceil(filteredData.length / itemsPerPage);
         const pageNumbers = [];
         if (totalPages <= 5) {
             for (let i = 1; i <= totalPages; i++) {
@@ -59,16 +59,17 @@ const SupportList = () => {
         return pageNumbers;
     };
 
-    const pageNumbers = getPageNumbers();
-
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
+        window.scrollTo(0, 0);
     };
 
     const paginatedData = filteredData.slice(
         (currentPage - 1) * itemsPerPage,
         currentPage * itemsPerPage
     );
+
+    const pageNumbers = getPageNumbers();
 
     return (
         <div>

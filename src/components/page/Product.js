@@ -65,7 +65,7 @@ function Product(){
                     </div>
                 </div>
                 <div className="product-target__img">
-                    <img src={`${process.env.PUBLIC_URL}/img/a3trl-jfmc6.webp`} alt="aqw5r-2t0j2"></img>
+                    <img src={`${process.env.PUBLIC_URL}/img/asdhi-ncx8i.webp`} alt="aqw5r-2t0j2"></img>
                 </div>
             </div>
             <div className="product-target__content">
@@ -84,7 +84,7 @@ function Product(){
                     </div>
                 </div>
                 <div className="product-target__img">
-                    <img src={`${process.env.PUBLIC_URL}/img/a3trl-jfmc6.webp`} alt="aqw5r-2t0j2"></img>
+                    <img src={`${process.env.PUBLIC_URL}/img/asdhi-ncx8i.webp`} alt="aqw5r-2t0j2"></img>
                 </div>
             </div>
             <div className="product-target__content">
@@ -103,7 +103,7 @@ function Product(){
                     </div>
                 </div>
                 <div className="product-target__img">
-                    <img src={`${process.env.PUBLIC_URL}/img/a3trl-jfmc6.webp`} alt="aqw5r-2t0j2"></img>
+                    <img src={`${process.env.PUBLIC_URL}/img/asdhi-ncx8i.webp`} alt="aqw5r-2t0j2"></img>
                 </div>
             </div>
             </div>

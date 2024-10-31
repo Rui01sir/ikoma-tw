@@ -47,7 +47,7 @@ function HomePage() {
         <div>
             <div className="home-banner">
                 <div className="home-banner__img animate__animated animate__fadeIn">
-                    <img src={`${process.env.PUBLIC_URL}/img/ah4em-9udwd.webp`} alt="home-banner"></img>
+                    <img src={`${process.env.PUBLIC_URL}/img/awydu-r6sah.webp`} alt="home-banner"></img>
                 </div>
                 <div className="home-banner__content">
                     <div className="home-banner__box">
@@ -97,7 +97,7 @@ function HomePage() {
                 </div>
                 <div className="box-2 clickable-div"  onClick={() => handleClick('/Support')}>
                     <div className="box-3">
-                        <img src={`${process.env.PUBLIC_URL}/img/aksph-8aazk.webp`}  alt="suprot-img"></img>
+                        <img src={`${process.env.PUBLIC_URL}/img/asdhi-ncx8i.webp`}  alt="suprot-img"></img>
                         <div className="overlay">
                             <h6 className="description">Share insights on product support and maintenance tips to ensure optimal performance.</h6>
                         </div>
@@ -131,9 +131,10 @@ function HomePage() {
                     <img src={`${process.env.PUBLIC_URL}/img/a4yhc-u70on.svg`}  alt="content-next-img"></img>
                 </div>
                 <div className="content-5">
-                    <h2>Address</h2>
-                    <div className="content-map">
-                        <GoogleMap />
+                    {/* <h2>Address</h2> */}
+                    <div className="content-banner">
+                        {/* <GoogleMap /> */}
+                        <img src={`${process.env.PUBLIC_URL}/img/ikoma-tw_banner.webp`}  alt="content-banner-img"></img>
                     </div>
                 </div>
                 <div className="content-next-2">
