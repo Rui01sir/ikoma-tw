@@ -2387,6 +2387,7 @@ select option{
 
 .loading-page img{
   width: 10%;
+  margin-bottom: 2.5%;
   animation: loading-page 3s ease-in-out infinite;
 }
 
