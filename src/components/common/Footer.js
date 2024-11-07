@@ -8,7 +8,7 @@ const Footer = ({ hide }) => {
                 <div className="footer-bar">
                     <div className="nav-logo">
                         <Link to="/">
-                            <img src={`${process.env.PUBLIC_URL}/img/web-logo-n.webp`} alt="nav-logo" />
+                            <img src={`${process.env.PUBLIC_URL}/img/web-logo-n.svg`} alt="nav-logo" />
                         </Link>
                     </div>
                     <ul>
