@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Link,useNavigate } from "react-router-dom";
-import GoogleMap from "../database/GoogleMap";
 
 function HomePage() {
     useEffect(() => {
@@ -47,7 +46,7 @@ function HomePage() {
         <div>
             <div className="home-banner">
                 <div className="home-banner__img animate__animated animate__fadeIn">
-                    <img src={`${process.env.PUBLIC_URL}/img/awydu-r6sah.webp`} alt="home-banner"></img>
+                    <img src={`${process.env.PUBLIC_URL}/img/awydu-r6sah.png`} alt="home-banner"></img>
                 </div>
                 <div className="home-banner__content">
                     <div className="home-banner__box">
