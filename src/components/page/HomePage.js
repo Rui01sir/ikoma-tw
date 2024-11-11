@@ -2,12 +2,13 @@ import React, { useEffect } from "react";
 import { Link,useNavigate } from "react-router-dom";
 
 function HomePage() {
-    useEffect(() => {
+useEffect(() => {
         const boxes = document.querySelectorAll('.home-banner__content, .box-2, .content-1, .content-5, .content-next-1, .content-next-2');
-
+    
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !entry.target.classList.contains('animate__animated')) {
+                    // 添加动画效果
                     if (entry.target.classList.contains('home-banner__content')) {
                         entry.target.classList.add('animate__slideInLeft');
                     } else if (entry.target.classList.contains('box-2')) {
@@ -21,16 +22,16 @@ function HomePage() {
                     } else if (entry.target.classList.contains('content-next-2')) {
                         entry.target.classList.add('animate__slideInLeft');
                     }
-                    entry.target.classList.add('animate__animated');
-                    observer.unobserve(entry.target);
+                    entry.target.classList.add('animate__animated'); // 标记元素已动画
+                    observer.unobserve(entry.target); // 停止观察该元素
                 }
             });
         }, { threshold: 0.1 });
-
+    
         boxes.forEach(box => {
             observer.observe(box);
         });
-    }, []);
+    }, []);    
 
     const navigate = useNavigate();
 
