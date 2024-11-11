@@ -12,7 +12,7 @@ const Footer = ({ hide }) => {
                         </Link>
                     </div>
                     <ul>
-                <li><Link to="/Campany">COMPANY</Link></li>
+                <li><Link to="/Company">COMPANY</Link></li>
                 <li><Link to="/News">NEWS</Link></li>
                 <li><Link to="/Product">PRODUCT</Link></li>
                 <li><Link to="/Support">SUPPORT</Link></li>
