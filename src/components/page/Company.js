@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 
 function Company(){
-    useEffect(() => {
+        useEffect(() => {
         const boxes = document.querySelectorAll('.company-page, .company-caption__text, .company-service, .company-target__box, .company-target__text, .company-target__img, .company-caption__img, .company-service__box');
 
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !entry.target.classList.contains('animate__animated')) {
+                    // 根据元素类名添加相应的动画效果
                     if (entry.target.classList.contains('company-page')) {
                         entry.target.classList.add('animate__fadeInUp');
                     } else if (entry.target.classList.contains('company-caption__text')) {
@@ -24,8 +25,8 @@ function Company(){
                     } else if (entry.target.classList.contains('company-service__box')) {
                         entry.target.classList.add('animate__fadeInUp');
                     }
-                    entry.target.classList.add('animate__animated');
-                    observer.unobserve(entry.target);
+                    entry.target.classList.add('animate__animated'); // 添加已动画标记
+                    observer.unobserve(entry.target); // 停止观察该元素
                 }
             });
         }, { threshold: 0.1 });
@@ -34,6 +35,11 @@ function Company(){
             observer.observe(box);
         });
     }, []);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
     return(
         <div>
             <div className="banner-page">
