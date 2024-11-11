@@ -746,6 +746,11 @@ footer{
     /* position: absolute; */
     font-size: .8rem;
   }
+    
+  .home-banner__text h2{
+    font-size: 1rem;
+    color: #fff;
+  }
 }
 
 /* Card */
