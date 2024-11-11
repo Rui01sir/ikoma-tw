@@ -114,6 +114,7 @@ li{
 
   .scroll-to-top img{
     width: 17px;
+    height: 17px;
   }
 }
 
@@ -563,14 +564,8 @@ footer{
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  /* opacity: 0;
-  transition: opacity 3s; */
 }
 
-/* .home-banner__content.animate__slideInLeft {
-  opacity: 1;
-  animation-duration: 3s;
-} */
 
 .home-banner__box{
   width: 100%;
@@ -712,6 +707,14 @@ footer{
     overflow: hidden;
   }
 
+  .home-banner__text{
+    width: 80%;
+    height: 100%;
+    margin-right: 0%;
+    margin-left: 5%;
+    margin-bottom: 8%; 
+  } 
+  
   .home-banner__content{
     width: 100%;
     height: 500px;
@@ -738,7 +741,7 @@ footer{
   }
   
   .contact-us-text{
-/*     width: 70%; */
+    /* width: 70%; */
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -746,19 +749,12 @@ footer{
     /* position: absolute; */
     font-size: .8rem;
   }
-
-  .home-banner__text{
-    width: 70%;
-    /* height: 100%; */
-    margin-right: 0%;
-    margin-left: 5%;
-    margin-bottom: 8%;
-  } 
-    
+  
   .home-banner__text h2{
     font-size: 1rem;
     color: #fff;
   }
+  
 }
 
 /* Card */
@@ -1245,11 +1241,6 @@ footer{
   /* opacity: 0;
   transition: opacity 3s; */
 }
-
-/* .company-page.animate__fadeInUp{
-  opacity: 1;
-  animation-duration: 3s;
-} */
 
 .company-page__content{
   width: 83.3333%;
@@ -2400,12 +2391,13 @@ select option{
 
 .loading-page img{
   width: 10%;
+  margin-bottom: 2.5%;
   animation: loading-page 3s ease-in-out infinite;
 }
 
 .progress-bar {
-  width: 50%;
-  height: 0.5%;
+  width: 25%;
+  height: 0.7%;
   background-color: #d1d1d1;
   border-radius: 4px;
   overflow: hidden;
@@ -2419,6 +2411,19 @@ select option{
 }
 
 @media (max-width:765px) {
+  .loading-page img{
+    width: 10%;
+    margin-bottom: 5%;
+  }
+
+  .progress-bar {
+    width: 40%;
+    height: 0.7%;
+    background-color: #d1d1d1;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
   .loading-page img{
     width: 20%;
   }
