@@ -61,7 +61,7 @@ function Navbar() {
                 <div className="navbar">
                     <div className="nav-logo">
                         <Link to="/">
-                            <img src={`${process.env.PUBLIC_URL}/img/web-logo-n.svg`} alt="nav-logo"/>
+                            <img src={`${process.env.PUBLIC_URL}/img/web-logo-n.webp`} alt="nav-logo"/>
                         </Link>
                     </div>
                     <ul>

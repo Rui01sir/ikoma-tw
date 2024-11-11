@@ -18,7 +18,7 @@ const Loading = ({ Component, onLoadingFinish }) => {
         <div>
             {isLoading ? ( 
                 <div className="loading-page">
-                    <img src={`${process.env.PUBLIC_URL}/img/web-logo-n.svg`} alt='loading-logo'></img>
+                    <img src={`${process.env.PUBLIC_URL}/img/web-logo-b.webp`} alt='loading-logo'></img>
                     <ProgressBar />
                 </div>
             ) :( 
