@@ -738,7 +738,7 @@ footer{
   }
   
   .contact-us-text{
-    width: 70%;
+/*     width: 70%; */
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -746,6 +746,14 @@ footer{
     /* position: absolute; */
     font-size: .8rem;
   }
+
+  .home-banner__text{
+    width: 70%;
+    /* height: 100%; */
+    margin-right: 0%;
+    margin-left: 5%;
+    margin-bottom: 8%;
+  } 
     
   .home-banner__text h2{
     font-size: 1rem;
