@@ -714,6 +714,15 @@ footer{
     margin-left: 5%;
     margin-bottom: 8%; 
   } 
+
+  .home-banner__box{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom:8%;
+  }
   
   .home-banner__content{
     width: 100%;
