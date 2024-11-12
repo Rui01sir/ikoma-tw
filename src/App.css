@@ -101,18 +101,18 @@ li{
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-@media (max-width:600px) {
-  .scroll-to-top,.scroll-to-message {
+@media (max-width: 600px) {
+  .scroll-to-top,
+  .scroll-to-message {
     width: 45px;
     height: 45px;
+    border-radius: 50%;
+    padding: 5px; 
+    aspect-ratio: 1 / 1; 
   }
 
-  .scroll-to-message img{
-    width: 17px;
-    height: 17px;
-  }
-
-  .scroll-to-top img{
+  .scroll-to-message img,
+  .scroll-to-top img {
     width: 17px;
     height: 17px;
   }
@@ -2402,12 +2402,12 @@ select option{
 
 .loading-page img{
   width: 10%;
-  margin-bottom: 2.5%;
+  margin-bottom: 2%;
   animation: loading-page 3s ease-in-out infinite;
 }
 
 .progress-bar {
-  width: 25%;
+  width: 30%;
   height: 0.7%;
   background-color: #d1d1d1;
   border-radius: 4px;
