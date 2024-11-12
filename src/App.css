@@ -707,14 +707,6 @@ footer{
     overflow: hidden;
   }
 
-  .home-banner__text{
-    width: 80%;
-    height: 100%;
-    margin-right: 0%;
-    margin-left: 5%;
-    margin-bottom: 8%; 
-  } 
-
   .home-banner__box{
     width: 100%;
     display: flex;
@@ -723,6 +715,14 @@ footer{
     align-items: flex-start;
     margin-bottom:8%;
   }
+
+  .home-banner__text{
+    width: 80%;
+    height: 100%;
+    margin-right: 0%;
+    margin-left: 5%;
+    margin-bottom: 5%; 
+  } 
   
   .home-banner__content{
     width: 100%;
@@ -768,7 +768,7 @@ footer{
 
 /* Card */
 .box-1{
-  /* width: 83.3333%; */
+  width: 83.3333%;
   height: 600px;
   margin-top: 32px;
   margin-left: 20px;
