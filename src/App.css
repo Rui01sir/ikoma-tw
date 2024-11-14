@@ -1006,11 +1006,12 @@ footer{
   z-index: -10;
 }
 
-.content-4{
-  width:100% ;
-  height: 850px;
+.content-4 {
+  width: 100%;
+  height: 800px;
   display: flex;
   justify-content: center;
+  margin-bottom: 2%;
 }
 
 .content-5{
@@ -1031,11 +1032,18 @@ footer{
 
 .content-banner{
   width: 100%;
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
   /* height: 600px; */
 }
 
 .content-banner img{
-  width: 100%;
+  width: 83.3333%;
+}
+
+.content-banner-m-img{
+  display: none;
 }
 
 .content-next-1{
@@ -1163,6 +1171,14 @@ footer{
     display: flex;
     justify-content: center;
     /* margin-bottom: 5%; */
+  }
+
+  .content-banner-img{
+    display: none;
+  }
+
+  .content-banner-m-img{
+    display: block;
   }
 
   .content-next-2{
