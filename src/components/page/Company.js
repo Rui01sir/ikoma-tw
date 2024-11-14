@@ -1,44 +1,56 @@
 import React, { useEffect } from "react";
 
-function Company(){
-        useEffect(() => {
-        const boxes = document.querySelectorAll('.company-page, .company-caption__text, .company-service, .company-target__box, .company-target__text, .company-target__img, .company-caption__img, .company-service__box');
+function Company() {
+    useEffect(() => {
+        const boxes = document.querySelectorAll(
+            '.company-page, .company-caption__text, .company-service, .company-target__box, .company-target__text, .company-target__img, .company-caption__img, .company-service__box'
+        );
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.classList.contains('animate__animated')) {
-                    // 根据元素类名添加相应的动画效果
-                    if (entry.target.classList.contains('company-page')) {
-                        entry.target.classList.add('animate__fadeInUp');
-                    } else if (entry.target.classList.contains('company-caption__text')) {
-                        entry.target.classList.add('animate__fadeInUp');
-                    } else if (entry.target.classList.contains('company-service')) {
-                        entry.target.classList.add('animate__fadeIn');
-                    } else if (entry.target.classList.contains('company-target__box')) {
-                        entry.target.classList.add('animate__slideInLeft');
-                    } else if (entry.target.classList.contains('company-target__text')) {
-                        entry.target.classList.add('animate__fadeInUp');
-                    } else if (entry.target.classList.contains('company-target__img')) {
-                        entry.target.classList.add('animate__fadeInUp');
-                    } else if (entry.target.classList.contains('company-caption__img')) {
-                        entry.target.classList.add('animate__fadeIn');
-                    } else if (entry.target.classList.contains('company-service__box')) {
-                        entry.target.classList.add('animate__fadeInUp');
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                        // 根據元素的 class 名稱添加相應的動畫效果
+                        if (entry.target.classList.contains('company-page')) {
+                            entry.target.classList.add('animate__fadeInUp');
+                        } else if (entry.target.classList.contains('company-caption__text')) {
+                            entry.target.classList.add('animate__fadeInUp');
+                        } else if (entry.target.classList.contains('company-service')) {
+                            entry.target.classList.add('animate__fadeIn');
+                        } else if (entry.target.classList.contains('company-target__box')) {
+                            entry.target.classList.add('animate__slideInLeft');
+                        } else if (entry.target.classList.contains('company-target__text')) {
+                            entry.target.classList.add('animate__fadeInUp');
+                        } else if (entry.target.classList.contains('company-target__img')) {
+                            entry.target.classList.add('animate__fadeInUp');
+                        } else if (entry.target.classList.contains('company-caption__img')) {
+                            entry.target.classList.add('animate__fadeIn');
+                        } else if (entry.target.classList.contains('company-service__box')) {
+                            entry.target.classList.add('animate__fadeInUp');
+                        }
+
+                        // 添加已動畫標記並停止觀察
+                        entry.target.classList.add('animated');
+                        observer.unobserve(entry.target);
                     }
-                    entry.target.classList.add('animate__animated'); // 添加已动画标记
-                    observer.unobserve(entry.target); // 停止观察该元素
-                }
-            });
-        }, { threshold: 0.1 });
+                });
+            },
+            { threshold: 0.1 }
+        );
 
-        boxes.forEach(box => {
+        boxes.forEach((box) => {
             observer.observe(box);
         });
+
+        return () => {
+            // 清除 observer，避免內存洩漏
+            observer.disconnect();
+        };
     }, []);
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
     
     return(
         <div>
