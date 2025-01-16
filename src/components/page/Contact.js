@@ -1,57 +1,89 @@
-import React, { useState, useEffect  } from 'react';
-import CountrySelect from '../database/CountrySelect'
-import CountryCodeSelect from '../database/CountryCodeSelect'
+import React, { useState, useEffect } from 'react';
+import CountrySelect from '../database/CountrySelect';
+import CountryCodeSelect from '../database/CountryCodeSelect';
 
-function Contact(){
-        const [formData, setFormData] = useState({
-        name: '',
-        country: '',
-        position: '',
-        phoneCode: '+1',
-        phoneNumber: '',
-        email: '',
-        message: ''
-    });
+function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    country: '',
+    position: '',
+    phoneCode: '+1',
+    phoneNumber: '',
+    email: '',
+    message: '',
+  });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevData => ({
-            ...prevData,
-            [name]: value
-        }));
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    try {
+      if (typeof window.grecaptcha === 'undefined') {
+        alert('Google reCAPTCHA script not loaded. Please try again later.');
+        return;
+      }
+  
+      const recaptchaToken = await new Promise((resolve, reject) => {
+        window.grecaptcha.ready(() => {
+          window.grecaptcha
+            .execute('6Ldn3aYqAAAAADKfHyrBl5pI3XOnWRD9eYlPm9_k', { action: 'submit' })
+            .then(resolve)
+            .catch(reject);
+        });
+      });
+  
+      console.log('reCAPTCHA token:', recaptchaToken); // Debug: 檢查 token
+      if (!recaptchaToken) {
+        alert('Please complete the reCAPTCHA verification.');
+        return;
+      }
+  
+      const form = e.target;
+      const formData = new FormData(form);
+      formData.append('g-recaptcha-response', recaptchaToken);
+  
+      const response = await fetch('https://formspree.io/f/xkggjqjz', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+  
+      console.log('Formspree response:', response); // Debug: 檢查回應
+      if (response.ok) {
+        alert('Form submitted successfully!');
+        form.reset();
+      } else {
+        const result = await response.json();
+        console.error('Failed to submit the form:', result);
+        alert('Failed to submit the form');
+      }
+    } catch (error) {
+      console.error('Detailed error:', error);
+      alert('An unexpected error occurred: ' + error.message);
+    }
+  };  
+
+  useEffect(() => {
+    // 確保 reCAPTCHA 初始化時沒有問題
+    const checkRecaptcha = () => {
+      if (typeof window.grecaptcha === 'undefined') {
+        console.error('Google reCAPTCHA script not loaded.');
+      } else {
+        console.log('Google reCAPTCHA script loaded successfully.');
+      }
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const form = e.target;
-        const formData = new FormData(form);
-
-        try {
-            const response = await fetch('https://formspree.io/f/manybkpo', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-
-            if (response.ok) {
-                alert('Form submitted successfully!');
-                form.reset();
-                window.location.reload();
-            } else {
-                const result = await response.json();
-                console.error('Failed to submit the form:', result);
-                alert('Failed to submit the form');
-            }
-        } catch (error) {
-            console.error('An unexpected error occurred:', error);
-            alert('An unexpected error occurred!');
-        }
-    };
-
-    useEffect(() => {
-      window.scrollTo(0, 0);
+    checkRecaptcha();
+    window.scrollTo(0, 0);
   }, []);
     return(
         <div>
