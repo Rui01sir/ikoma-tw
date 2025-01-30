@@ -4095,6 +4095,12 @@ input[type="text"] {
 }
 
 @media (max-width: 765px) {
+  .list-page__content{
+    display: flex;
+    justify-content: center;
+    margin: 3%;
+  }
+
   .list-page__content h1{
     font-size: 1rem;
   }
@@ -4134,14 +4140,14 @@ input[type="text"] {
   }
 
   .list-page__text thead tr{
-    font-size: 0.5rem;
+    font-size: 0.4rem;
     border: 0;
   }
 
   .list-page__pg-btn{
     width: 50%;
-    margin-top: 10%;
-    margin-bottom: 5%;
+    margin-top: 8%;
+    margin-bottom: 15%;
     display: flex;
     justify-content: center;
   }
@@ -4159,6 +4165,26 @@ input[type="text"] {
   
   .clickable-div {
     cursor: pointer;
+  }
+
+  .search-cotainer__contact{
+    width: 100%;
+  }
+
+  .search-container h3{
+    font-size: 1rem;
+  }
+    
+.search-cotainer__contact input{
+    height: 50%;
+  }
+
+  .search-cotainer__select-font select{
+    height: 50%;
+  }
+
+  .search-container{
+    height: 300px;
   }
 }
 
