@@ -68,7 +68,7 @@ function Navbar() {
                         <li><Link to="Company">COMPANY</Link></li>
                         <li><Link to="News">NEWS</Link></li>
                         <li><Link to="Product">PRODUCT</Link></li>
-                        <li><Link to="Support">SUPPORT</Link></li>
+                        <li><Link to="SupportList">SUPPORT</Link></li>
                         <li><Link to="Contact">CONTACT</Link></li>
                         <div className="language">
                             <Link

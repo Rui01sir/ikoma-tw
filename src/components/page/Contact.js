@@ -88,7 +88,7 @@ function Contact() {
     return(
         <div>
             <div className="banner-page">
-                <img src={`${process.env.PUBLIC_URL}/img/aq7xm-hh20y.webp`} alt="contact-banner"></img>
+                <img src={`${process.env.PUBLIC_URL}/img/a4k8x-94bmd.webp`} alt="contact-banner"></img>
             </div>
         <div className="contact">
             <div className="contact-page">
@@ -115,7 +115,7 @@ function Contact() {
                         <label htmlFor="position">POSITION TITLE<span className="required">*</span></label>
                         <select id="position" name="position" value={formData.position} onChange={handleChange} required>                                          
                           <option value="">SELECT POSITION</option>
-                          <option value="boss">Boss</option>
+                          {/* <option value="boss">Boss</option> */}
                           <option value="Manager">Manager</option>
                           <option value="Staff">Staff</option>
                         </select>
@@ -156,7 +156,7 @@ function Contact() {
                         value={formData.message}
                         onChange={handleChange}
                         required
-                        placeholder="WHAT DO YOU WHAT TO SAY"
+                        placeholder="Please leave your message and WhatsApp ID so we can contact you."
                       ></textarea>
                     </div>
                     <button className='submit-btn' type="submit">SUBMIT
@@ -166,7 +166,7 @@ function Contact() {
                 </div>
                 <div className="contact-add">
                     <div className="contact-add__img">
-                        <img src={`${process.env.PUBLIC_URL}/img/am8bx-v2r8r.svg`} alt="contact-add-img"></img>
+                        <img src={`${process.env.PUBLIC_URL}/img/avhqr-aqfsd.webp`} alt="contact-add-img"></img>
                     </div>
                     <div className="contact-add__text">
                         <p>

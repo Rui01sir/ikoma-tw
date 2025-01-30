@@ -3,7 +3,7 @@ import { Link,useNavigate } from "react-router-dom";
 
 function HomePage() {
     useEffect(() => {
-        const boxes = document.querySelectorAll('.home-banner__content, .box-2, .content-1, .content-5, .content-next-1, .content-next-2');
+        const boxes = document.querySelectorAll('.home-banner__content, .box-2, .box-2-1, .content-1, .content-5, .content-next-1, .content-next-2');
 
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -12,12 +12,14 @@ function HomePage() {
                         entry.target.classList.add('animate__slideInLeft');
                     } else if (entry.target.classList.contains('box-2')) {
                         entry.target.classList.add('animate__fadeInUp');
+                    } else if (entry.target.classList.contains('box-2-1')) {
+                        entry.target.classList.add('animate__fadeInUp');
                     } else if (entry.target.classList.contains('content-1')) {
                         entry.target.classList.add('animate__fadeInUp');
                     } else if (entry.target.classList.contains('content-5')) {
                         entry.target.classList.add('animate__fadeIn');
                     } else if (entry.target.classList.contains('content-next-1')) {
-                        entry.target.classList.add('animate__slideInLeft');
+                        entry.target.classList.add('animate__slideInRight');
                     } else if (entry.target.classList.contains('content-next-2')) {
                         entry.target.classList.add('animate__slideInLeft');
                     }
@@ -71,7 +73,7 @@ function HomePage() {
             {/* Card */}
             <div className="contact-box">
             <div className="box-1">
-                <div className="box-2 clickable-div" style={{marginRight:'2%'}} onClick={() => handleClick('/News')}>
+                <div className="box-2-1 clickable-div" onClick={() => handleClick('/News')}>
                     <div className="box-3">
                         <img src={`${process.env.PUBLIC_URL}/img/a6e05-i715q.webp`} alt="news-img"></img>
                         <div className="overlay">
@@ -83,7 +85,7 @@ function HomePage() {
                         <img src={`${process.env.PUBLIC_URL}/img/next-icon-b.svg`} alt="icon-next-box"></img>
                     </div>
                 </div>
-                <div className="box-2 clickable-div" style={{ backgroundColor: '#FF9900',marginRight:'2%' }} onClick={() => handleClick('/Product')}>
+                <div className="box-2-1 clickable-div" style={{ backgroundColor: '#FF9900' }} onClick={() => handleClick('/Product')}>
                     <div className="box-3">
                         <img src={`${process.env.PUBLIC_URL}/img/aj00a-cm0qj.webp`}  alt="product-img"></img>
                         <div className="overlay">
@@ -95,7 +97,7 @@ function HomePage() {
                         <img src={`${process.env.PUBLIC_URL}/img/next-icon-b.svg`}  alt="icon-next-box"></img>
                     </div>
                 </div>
-                <div className="box-2 clickable-div"  onClick={() => handleClick('/Support')}>
+                <div className="box-2 clickable-div"  onClick={() => handleClick('/SupportList')}>
                     <div className="box-3">
                         <img src={`${process.env.PUBLIC_URL}/img/ahrxv-tdyro.webp`}  alt="suprot-img"></img>
                         <div className="overlay">
@@ -116,7 +118,7 @@ function HomePage() {
                     <div className="content-2">
                         <h2>IKOMA</h2>
                         <p>Ikoma tech Co. has long been specialized in this field and is currently one of the leading manufacturers of high performance shock absorber and various auto related accessories in taiwan since 1978.</p>
-                        <Link to="/Company" alt="go-company" >COMPANY<img src={`${process.env.PUBLIC_URL}/img/next-icon-b.svg`} alt="icon-next"></img></Link>
+                        <Link to="/Company" alt="go-company" onClick={() => handleClick('/Company')}>COMPANY<img src={`${process.env.PUBLIC_URL}/img/next-icon-b.svg`} alt="icon-next"></img></Link>
                     </div>
                     {/* <div className="content-3">
                         <img src={`${process.env.PUBLIC_URL}/img/a2ylt-uyy6q.webp`} alt="contect-img"></img>

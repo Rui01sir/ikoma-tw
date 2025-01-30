@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -7,6 +8,26 @@ import "swiper/css/autoplay";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 
 const Carousel = () => {
+    const navigate = useNavigate();
+
+    const slides = [
+        {
+            img: `${process.env.PUBLIC_URL}/img/ad2xc-ead6f.webp`,
+            alt: "Slide 1",
+            id: 1,
+        },
+        {
+            img: `${process.env.PUBLIC_URL}/img/anumd-f6zxq.webp`,
+            alt: "Slide 2",
+            id: 1,
+        },
+        {
+            img: `${process.env.PUBLIC_URL}/img/as77e-ae9xo.webp`,
+            alt: "Slide 3",
+            id: 1,
+        },
+    ];
+
     return (
         <Swiper
             effect={"coverflow"}
@@ -28,17 +49,17 @@ const Carousel = () => {
             modules={[EffectCoverflow, Pagination, Autoplay]}
             className="mySwiper"
         >
-            <SwiperSlide>
-                <img src={`${process.env.PUBLIC_URL}/img/a9086-dow6o.svg`} alt="Slide 1" />
-            </SwiperSlide>
-            <SwiperSlide>
-                <img src={`${process.env.PUBLIC_URL}/img/a96ml-0qr3t.svg`} alt="Slide 2" />
-            </SwiperSlide>
-            <SwiperSlide>
-                <img src={`${process.env.PUBLIC_URL}/img/aytym-h8rct.svg`} alt="Slide 3" />
-            </SwiperSlide>
+            {slides.map((slide) => (
+                <SwiperSlide
+                    key={slide.id}
+                    onClick={() => navigate(`/news/${slide.id}`)} // 點擊跳轉到對應頁面
+                    style={{ cursor: "pointer" }}
+                >
+                    <img src={slide.img} alt={slide.alt} />
+                </SwiperSlide>
+            ))}
         </Swiper>
     );
 };
 
-export default Carousel;
+export default Carousel; 
