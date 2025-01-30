@@ -187,7 +187,7 @@ function Product() {
                     <div className="product-page__img-2">
                         <h2>Piston Rod</h2>
                         <div className='product-page__img-list'>
-                            <div className="product-page__img-box-2">
+                            <div className="product-page__img-box2">
                                 <img src={`${process.env.PUBLIC_URL}/img/a0v7l-1th8q.webp`} alt="a0v7l-1th8q"></img>
                             </div>
                             <div className="product-page__img-text">
@@ -201,7 +201,7 @@ function Product() {
                     <div className="product-page__img-2">
                         <h2>Major Components</h2>
                         <div className='product-page__img-list'>
-                            <div className="product-page__img-box-2">
+                            <div className="product-page__img-box2">
                                 <img src={`${process.env.PUBLIC_URL}/img/akd5n-4rmwx.webp`} alt="akd5n-4rmwx"></img>
                                 <img src={`${process.env.PUBLIC_URL}/img/a0ih8-n5t4k.webp`} alt="a0ih8-n5t4k"></img>
                             </div>

@@ -83,12 +83,12 @@ function ProductList() {
                     </div>
                 </div>
             </div>
-            <div className="news-content__btn">
-                <Link to="/Product">
+            <Link to="/Product">
+                <div className="news-content__btn">   
                     <img src={`${process.env.PUBLIC_URL}/img/back-icon.svg`} alt="back-icon" />
                     BACK
-                </Link>
-            </div>
+                </div>
+            </Link>
         </div>
     );
 }

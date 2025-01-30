@@ -69,12 +69,12 @@ const NewsDetail = () => {
                 <p className="news-content">{newsItem.content1}</p>
                 <img src={newsItem.imageUrl2} alt="News" className="news-image" />
                 <p className="news-content">{newsItem.content2}</p>
-                <div className="news-content__btn">
-                    <Link to="/News" alt="back-Homepage">
+                <Link to="/News">
+                    <div className="news-content__btn">   
                         <img src={`${process.env.PUBLIC_URL}/img/back-icon.svg`} alt="back-icon" />
                         BACK
-                    </Link>
-                </div>
+                    </div>
+                </Link>
             </div>
         </div>
     );
