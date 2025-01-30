@@ -4162,6 +4162,14 @@ input[type="text"] {
     justify-content: center;
     align-items: center;
   }
+
+  .list-page__pg-btn button:hover{
+    width: 20px;
+    height: 20px;
+    color: #000;
+    background-color: #FF9900;
+    border: 0;
+  }
   
   .clickable-div {
     cursor: pointer;
@@ -4176,11 +4184,12 @@ input[type="text"] {
   }
     
 .search-cotainer__contact input{
-    height: 50%;
+    height: 30px;
   }
 
   .search-cotainer__select-font select{
-    height: 50%;
+    height: 30px;
+    padding: 0;
   }
 
   .search-container{
