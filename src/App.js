@@ -8,7 +8,7 @@ import Company from './components/page/Company';
 import Contact from './components/page/Contact';
 import Product from './components/page/Product';
 import ProductList from './components/page/ProductList'; 
-import SupportList from './components/page/SupportList';
+// import SupportList from './components/page/SupportList';
 import News from './components/page/News';
 import NewsDetail from './components/page/NewsDetail';
 import Page404 from './components/page/Page404';
