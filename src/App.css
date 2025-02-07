@@ -1075,12 +1075,12 @@ footer{
   transition: opacity 3s;
 }
 
-.content-5.animate__fadeIn{
+/* .content-5.animate__fadeIn{
   opacity: 1;
   animation-duration: 3s;
   display: flex;
   justify-content: space-between;
-}
+} */
 
 .content-5 p{
   text-align: end;
