@@ -165,9 +165,9 @@ function Contact() {
                 </form>
                 </div>
                 <div className="contact-add">
-                    <div className="contact-add__img">
+                    {/* <div className="contact-add__img">
                         <img src={`${process.env.PUBLIC_URL}/img/avhqr-aqfsd.webp`} alt="contact-add-img"></img>
-                    </div>
+                    </div> */}
                     <div className="contact-add__text">
                         <p>
                         <a

@@ -3,7 +3,7 @@ import { Link,useNavigate } from "react-router-dom";
 
 function HomePage() {
     useEffect(() => {
-        const boxes = document.querySelectorAll('.home-banner__content, .box-2, .box-2-1, .content-1, .content-5, .content-next-1, .content-next-2');
+        const boxes = document.querySelectorAll('.home-banner__content, .box-2, .box-2-1, .content-1, .content-2, .content-5, .content-next-1, .content-next-2');
 
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -15,6 +15,8 @@ function HomePage() {
                     } else if (entry.target.classList.contains('box-2-1')) {
                         entry.target.classList.add('animate__fadeInUp');
                     } else if (entry.target.classList.contains('content-1')) {
+                        entry.target.classList.add('animate__fadeInUp');
+                    } else if (entry.target.classList.contains('content-2')) {
                         entry.target.classList.add('animate__fadeInUp');
                     } else if (entry.target.classList.contains('content-5')) {
                         entry.target.classList.add('animate__fadeIn');
