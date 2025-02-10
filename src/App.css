@@ -193,6 +193,12 @@ nav button {
   display: none;
 }
 
+@media (max-width: 1300px) {
+  .nav-logo a img{
+    height: 35px;
+  }
+}
+
 @media (max-width: 1200px) {
   nav {
     width: 100%;
@@ -237,7 +243,7 @@ nav button {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 79px;
+    top: 50%;
     right: 0;
     background-color: #ffffff;
     padding: 0px;
@@ -334,6 +340,20 @@ nav button {
 }
 
 @media (max-width: 600px) {
+  nav {
+    width: 100%;
+    height: 40px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    display: flex;
+    justify-content: space-around;
+    position: relative; 
+  }
+
+  nav ul {
+    top: 95%;
+  }
+
   nav ul.active {
     width:100% ;
     height: auto;
@@ -1070,7 +1090,7 @@ footer{
   margin-top: 81px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   opacity: 0;
   transition: opacity 3s;
 }
@@ -1283,6 +1303,7 @@ footer{
 
   .content-2 p{
     font-size: 12px;
+    line-height: 25px;
     height: 100%;
     margin: 0;
     margin-bottom: 10%;
@@ -1320,7 +1341,7 @@ footer{
     margin-bottom: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     opacity: 0;
     transition: opacity 3s;
   }
@@ -1890,7 +1911,7 @@ footer{
   }
 
   .company-page__text p{
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
 
   .company-caption__text h2{
@@ -1902,7 +1923,7 @@ footer{
   }
   
   .company-caption__text p{
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     color: #fff;
     text-align: center;
     line-height: 1.5;
@@ -1973,8 +1994,8 @@ footer{
   }
   
   .company-target__font p{
-    font-size: 0.5rem;
-    line-height: 1.5;
+    font-size: 0.6rem;
+    line-height: 25px;
   }
 }
 
@@ -1994,16 +2015,17 @@ footer{
   align-items: center;
 }
 
-.contact-add{
+.contact-add {
   width: 100%;
-  height: 100%;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-image:url(../build/img/avhqr-aqfsd.webp) ;
 }
 
-.contact-add__img{
+/* .contact-add__img{
   width: 550px;
   height: 550px;
   position: absolute;
@@ -2012,7 +2034,7 @@ footer{
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-}
+} */
 
 .contact-add__text{
   width: 50%;
@@ -2154,8 +2176,8 @@ select option{
   }
 
   .contact-add{
-    width: 100%;
-    height: 650px;
+    width: 600px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2220,8 +2242,8 @@ select option{
 
   .contact-add {
     width: 100%;
-    height: 400px;
-    margin-top: 40%;
+    height: 600px;
+    /* margin-top: 40%; */
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -2450,7 +2472,7 @@ select option{
 
 .product-page__img-text p{
   font-size: 16px;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .product-page__line{
@@ -4600,7 +4622,7 @@ hr {
   }
 
   .news-page__card-text p{
-    font-size: .8rem;
+    font-size: .7rem;
     margin: 0;
   }
 
@@ -4647,7 +4669,8 @@ hr {
   }
 
   .news-page__about h2{
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .news-page__about-list {
@@ -4752,7 +4775,7 @@ hr {
   color: #555;
   margin: 0 auto;
   margin-bottom: 110px;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .news-content__btn{
