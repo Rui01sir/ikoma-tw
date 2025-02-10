@@ -1,13 +1,13 @@
 import './App.css';
 import 'animate.css';
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/common/Navbar';
 import HomePage from './components/page/HomePage';
 import Company from './components/page/Company';
 import Contact from './components/page/Contact';
 import Product from './components/page/Product';
-import ProductList from './components/page/ProductList'; 
+import ProductList from './components/page/ProductList';
 import SupportList from './components/page/SupportList';
 import News from './components/page/News';
 import NewsDetail from './components/page/NewsDetail';
@@ -17,30 +17,45 @@ import Footer from './components/common/Footer';
 import Loading from './components/animations/Loading';
 import ScrollToTop from './components/common/ScrollToTop';
 
-function App() {
-  const [isLoading, setIsLoading] = useState(true);
+function AppContent() {
+  const [isLoading, setIsLoading] = useState(false);
+  const location = useLocation(); // 監聽路由變化
 
-  const handleLoadingFinish = () => {
-    setIsLoading(false);
-  };
+  useEffect(() => {
+    setIsLoading(true); // 進入新頁面時顯示 Loading
+    const timer = setTimeout(() => setIsLoading(false), 1000); // 1 秒後隱藏 Loading
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
 
   return (
-    <Router>
+    <>
       <ScrollToTop />
       {!isLoading && <Navbar />}
-      <Routes>
-        <Route path="/" element={<Loading Component={HomePage} onLoadingFinish={handleLoadingFinish} />} />
-        <Route path="/Company" element={<Loading Component={Company} onLoadingFinish={handleLoadingFinish} />} />
-        <Route path="/Contact" element={<Loading Component={Contact} onLoadingFinish={handleLoadingFinish} />} />
-        <Route path="/SupportList" element={<Loading Component={SupportList} onLoadingFinish={handleLoadingFinish} />} />
-        <Route path="/Product" element={<Loading Component={Product} onLoadingFinish={handleLoadingFinish} />} />
-        <Route path="/product/:id" element={<ProductList />} />
-        <Route path="/News" element={<Loading Component={News} onLoadingFinish={handleLoadingFinish} />} />
-        <Route path="/news/:id" element={<NewsDetail />} />
-        <Route path="*" element={<Page404 />} Component={Page404} onLoadingFinish={handleLoadingFinish} />
-      </Routes>
+      {isLoading ? (
+        <Loading onLoadingFinish={() => setIsLoading(false)} />
+      ) : (
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/Company" element={<Company />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/SupportList" element={<SupportList />} />
+          <Route path="/Product" element={<Product />} />
+          <Route path="/product/:id" element={<ProductList />} />
+          <Route path="/News" element={<News />} />
+          <Route path="/news/:id" element={<NewsDetail />} />
+          <Route path="*" element={<Page404 />} />
+        </Routes>
+      )}
       <TopButton />
       {!isLoading && <Footer />}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
