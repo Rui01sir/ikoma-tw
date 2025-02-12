@@ -33,7 +33,7 @@ function Contact() {
       const recaptchaToken = await new Promise((resolve, reject) => {
         window.grecaptcha.ready(() => {
           window.grecaptcha
-            .execute('6Ldn3aYqAAAAADKfHyrBl5pI3XOnWRD9eYlPm9_k', { action: 'submit' })
+            .execute('6Lf7F9UqAAAAALConmGSEIRBj6KSiQuUt-qT-3Pd', { action: 'submit' })
             .then(resolve)
             .catch(reject);
         });
