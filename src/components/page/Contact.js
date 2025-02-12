@@ -116,7 +116,7 @@ function Contact() {
                         <select id="position" name="position" value={formData.position} onChange={handleChange} required>                                          
                           <option value="">SELECT POSITION</option>
                           {/* <option value="boss">Boss</option> */}
-                          <option value="Manager">Manager</option>
+                          <option value="Manager">G.M. Executive Assistant</option>
                           <option value="Staff">Staff</option>
                         </select>
                       </div>
