@@ -49,7 +49,7 @@ function Contact() {
       const formData = new FormData(form);
       formData.append('g-recaptcha-response', recaptchaToken);
   
-      const response = await fetch('https://formspree.io/f/xkggjqjz', {
+      const response = await fetch('https://formspree.io/f/xeoelzol', {
         method: 'POST',
         body: formData,
         headers: {
