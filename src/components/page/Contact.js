@@ -39,38 +39,46 @@ function Contact() {
         });
       });
   
-      console.log('reCAPTCHA token:', recaptchaToken); // Debug: 檢查 token
+      console.log('reCAPTCHA token:', recaptchaToken);
       if (!recaptchaToken) {
         alert('Please complete the reCAPTCHA verification.');
         return;
       }
   
-      const form = e.target;
-      const formData = new FormData(form);
-      formData.append('g-recaptcha-response', recaptchaToken);
+      const formDataToSend = new FormData();
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataToSend.append(key, value);
+      });
+      formDataToSend.append('g-recaptcha-response', recaptchaToken);
   
       const response = await fetch('https://formspree.io/f/xeoelzol', {
         method: 'POST',
-        body: formData,
-        headers: {
-          Accept: 'application/json',
-        },
+        body: formDataToSend,
+        headers: { Accept: 'application/json' },
       });
   
-      console.log('Formspree response:', response); // Debug: 檢查回應
+      console.log('Formspree response:', response);
+  
       if (response.ok) {
         alert('Form submitted successfully!');
-        form.reset();
+        setFormData({
+          name: '',
+          country: '',
+          position: '',
+          phoneCode: '+1',
+          phoneNumber: '',
+          email: '',
+          message: '',
+        });
       } else {
-        const result = await response.json();
-        console.error('Failed to submit the form:', result);
-        alert('Failed to submit the form');
+        alert('Failed to submit the form. Please try again.');
       }
     } catch (error) {
       console.error('Detailed error:', error);
       alert('An unexpected error occurred: ' + error.message);
     }
-  };  
+  };
+  
 
   useEffect(() => {
     // 確保 reCAPTCHA 初始化時沒有問題
