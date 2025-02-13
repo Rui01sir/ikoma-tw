@@ -41,7 +41,7 @@ function AppContent() {
           <Route path="/SupportList" element={<SupportList />} />
           <Route path="/Product" element={<Product />} />
           <Route path="/product/:id" element={<ProductList />} />
-          <Route path="/News" element={<News />} />
+          {/* <Route path="/News" element={<News />} /> */}
           <Route path="/news/:id" element={<NewsDetail />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
@@ -61,4 +61,3 @@ function App() {
 }
 
 export default App;
-
