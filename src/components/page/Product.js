@@ -122,12 +122,12 @@ function Product() {
                                 </div>
                                 <div className='product-target__list-text'>
                                     <h2>PCI SERIES</h2>
-                                    <p>IKOMA PERFORMANCE SHOCK ABSORBER WITH MONO-TYBE SYSTEM.</p>
+                                    <p>IKOMA PERFORMANCE SHOCK ABSORBER WITH TWIN-TUBE SYSTEM.</p>
                                 </div>
                             </div>
                         </div>
                 <div className="product-target__img">
-                    <img src={`${process.env.PUBLIC_URL}/img/ad7mn-2ubs8.webp`} alt="ad7mn-2ubs8"></img>
+                    <img src={`${process.env.PUBLIC_URL}/img/a3bed-gcoow.webp`} alt="ad7mn-2ubs8"></img>
                 </div>
                 </div>
                 </div>
@@ -150,12 +150,12 @@ function Product() {
                                 </div>
                                 <div className='product-target__list-text'>
                                     <h2>PCL SERIES</h2>
-                                    <p>IKOMA STANDARD ABSORBER WITH TWIN-TUBE SYSTEM.</p>
+                                    <p>IKOMA STANDARD ABSORBER WITH MONO-TYBE SYSTEM.</p>
                                 </div>
                             </div>
                         </div>
                 <div className="product-target__img">
-                    <img src={`${process.env.PUBLIC_URL}/img/a3bed-gcoow.webp`} alt="a3bed-gcoow"></img>
+                    <img src={`${process.env.PUBLIC_URL}/img/ad7mn-2ubs8.webp`} alt="a3bed-gcoow"></img>
                 </div>
                 </div>
                 </div>
