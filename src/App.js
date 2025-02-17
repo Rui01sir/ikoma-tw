@@ -10,6 +10,7 @@ import Product from './components/page/Product';
 import ProductList from './components/page/ProductList';
 import SupportList from './components/page/SupportList';
 import News from './components/page/News';
+import Sitemap from './components/common/Sitemap';
 import NewsDetail from './components/page/NewsDetail';
 import Page404 from './components/page/Page404';
 import TopButton from './components/common/TopButton';
@@ -44,6 +45,7 @@ function AppContent() {
           {/* <Route path="/News" element={<News />} /> */}
           <Route path="/news/:id" element={<NewsDetail />} />
           <Route path="*" element={<Page404 />} />
+          <Route path="/Sitemap" element={<Sitemap />} />
         </Routes>
       )}
       <TopButton />
