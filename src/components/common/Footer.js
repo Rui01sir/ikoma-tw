@@ -33,7 +33,7 @@ const Footer = ({ hide }) => {
                 <div className="footer-line"></div>
                 <div className="footer-name">
             <h6>© 2024 IKOMA CO., LTD. All Rights Reserved Designed</h6>
-            <p>By Blue Sky Design Studio Inc.</p>
+            <p>By <Link to="https://www.blue-sky-studio.com/">Blue Sky Design Studio</Link> Inc.</p>
                 </div>
             </footer>
         </div>
