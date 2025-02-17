@@ -13,6 +13,28 @@ function ProductList() {
         window.scrollTo(0, 0);
     }, []);
 
+    useEffect(() => {
+            const boxes = document.querySelectorAll('.product__listbox-1 , .product__textbox');
+    
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.classList.contains('product__listbox-1')) {
+                            entry.target.classList.add('animate__fadeInUp');
+                        } else if (entry.target.classList.contains('product__textbox')) {
+                            entry.target.classList.add('animate__slideInLeft');
+                        }
+                        entry.target.classList.add('animate__animated');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            boxes.forEach(box => {
+                observer.observe(box);
+            });
+        }, []);
+
     const handleBrandClick = () => {
         navigate('/some-page'); // 導航到其他頁面
     };
@@ -22,7 +44,7 @@ function ProductList() {
     }
 
     const contentData = productItem.accordionContent || []; // 從產品中獲取 accordionContent
-
+    
     return (
         <div>
             <div className="banner-page">

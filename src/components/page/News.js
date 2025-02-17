@@ -115,7 +115,7 @@ const News = () => {
                         </div>
                     </div>
                 </div>
-                <div className="news-page__about animate__fadeInUp animate__animated">
+                {/* <div className="news-page__about animate__fadeInUp animate__animated">
                     <h2>About News</h2>
                     <div className='news-page__about-list'>
                         <div className='news-page__about-box clickable-div' onClick={() => handleClick(1)} >
@@ -142,24 +142,7 @@ const News = () => {
                             <img src={`${process.env.PUBLIC_URL}/img/a6e05-i715q.webp`} alt='news-page__about-img'></img>
                         </div>
                     </div>
-                    {/* <div className="list-page__pg-btn">
-                        {pageNumbers.map((number, index) => (
-                            <button
-                                key={index}
-                                onClick={() => {
-                                    if (number === "...") return;
-                                    handlePageChange(number);
-                                }}
-                                disabled={number === "..."}
-                                style={{
-                                    fontWeight: currentPage === number ? "bold" : "normal",
-                                }}
-                            >
-                                {number}
-                            </button>
-                        ))}
-                    </div> */}
-                </div>
+                </div> */}
             </div>
         </div>
     );
