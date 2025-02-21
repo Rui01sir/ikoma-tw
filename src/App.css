@@ -45,7 +45,12 @@ h6{
 
 p{
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 250;
+  font-family: "Lexend Exa", sans-serif;
+}
+
+td{
+  font-weight: 250;
   font-family: "Lexend Exa", sans-serif;
 }
 
@@ -1058,7 +1063,7 @@ footer{
   line-height: 50px;
   margin-bottom: 2.5%;
   text-align: center;
-  font-family: "Lexend Zetta";
+  /* font-family: "Lexend Zetta"; */
 }
 
 .content-2 img{
@@ -1529,8 +1534,8 @@ footer{
   color: #fff;
   text-align: center;
   line-height: 1.5;
-  font-weight: 200;
-  font-family: "Lexend Exa";
+  /* font-weight: 200;
+  font-family: "Lexend Exa"; */
 }
 
 .company-caption__img{
@@ -1663,7 +1668,7 @@ footer{
 
 .company-target__font p{
   line-height: 1.5;
-  font-family: "Lexend Exa";
+  /* font-family: "Lexend Exa"; */
   font-size: 20px;
   line-height: 50px;
   text-align: center;
@@ -2467,8 +2472,8 @@ select option{
 
 .product-page__img-box{
   width: 50%;
-  margin-bottom: 5%;
-  margin-right: 5%;
+  /* margin-bottom: 5%;
+  margin-right: 5%; */
   display: flex;
   flex-direction: row;
 }
